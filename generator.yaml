@@ -717,11 +717,64 @@ resources:
           is_ignored: true  
       OnStart:
         compare:
-          is_ignored: true  
+          is_ignored: true
+  Domain:
+    exceptions:
+      errors:
+          404:
+            code: ResourceNotFound
+      terminal_codes:
+        - ResourceNotFound
+        - ResourceInUse
+        - InvalidParameterCombination
+        - InvalidParameterValue
+        - MissingParameter
+    hooks: 
+      sdk_create_post_set_output:
+        template_path: domain/sdk_create_post_set_output.go.tpl
+      sdk_read_one_post_set_output:
+        code: rm.customDescribeDomainSetOutput(ko)
+    fields:
+      DomainId:
+        is_read_only: true
+        print:
+          name: DOMAIN-ID
+        from:
+          operation: DescribeDomain
+          path: DomainId
+      DomainStatus:
+        is_read_only: true
+        print:
+          name: STATUS
+        from:
+          operation: DescribeDomain
+          path: Status        
+  UserProfile:
+    exceptions:
+      errors:
+          404:
+            code: ResourceNotFound
+      terminal_codes:
+        - ResourceNotFound
+        - ResourceInUse
+        - InvalidParameterCombination
+        - InvalidParameterValue
+        - MissingParameter
+  App:
+    exceptions:
+      errors:
+          404:
+            code: ResourceNotFound
+      terminal_codes:
+        - ResourceNotFound
+        - ResourceInUse
+        - InvalidParameterCombination
+        - InvalidParameterValue
+        - MissingParameter
 ignore:
     resource_names:
       - Algorithm
-      - App
+      # - App
       - AutoMLJob
       - Action
       - AppImageConfig
@@ -731,7 +784,7 @@ ignore:
       - Context
       # - DataQualityJobDefinition
       - DeviceFleet
-      - Domain
+      # - Domain
       - EdgePackagingJob
       # - EndpointConfig
       # - Endpoint
@@ -761,7 +814,7 @@ ignore:
       # - TransformJob
       - TrialComponent
       - Trial
-      - UserProfile
+      # - UserProfile
       - Workforce
       - Workteam
     operations:

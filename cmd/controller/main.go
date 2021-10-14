@@ -33,7 +33,9 @@ import (
 	svctypes "github.com/aws-controllers-k8s/sagemaker-controller/apis/v1alpha1"
 	svcresource "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource"
 
+	_ "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource/app"
 	_ "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource/data_quality_job_definition"
+	_ "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource/domain"
 	_ "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource/endpoint"
 	_ "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource/endpoint_config"
 	_ "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource/feature_group"
@@ -50,6 +52,7 @@ import (
 	_ "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource/processing_job"
 	_ "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource/training_job"
 	_ "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource/transform_job"
+	_ "github.com/aws-controllers-k8s/sagemaker-controller/pkg/resource/user_profile"
 )
 
 var (

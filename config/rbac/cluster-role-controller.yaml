@@ -25,6 +25,26 @@ rules:
 - apiGroups:
   - sagemaker.services.k8s.aws
   resources:
+  - apps
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - sagemaker.services.k8s.aws
+  resources:
+  - apps/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - sagemaker.services.k8s.aws
+  resources:
   - dataqualityjobdefinitions
   verbs:
   - create
@@ -38,6 +58,26 @@ rules:
   - sagemaker.services.k8s.aws
   resources:
   - dataqualityjobdefinitions/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - sagemaker.services.k8s.aws
+  resources:
+  - domains
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - sagemaker.services.k8s.aws
+  resources:
+  - domains/status
   verbs:
   - get
   - patch
@@ -358,6 +398,26 @@ rules:
   - sagemaker.services.k8s.aws
   resources:
   - transformjobs/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - sagemaker.services.k8s.aws
+  resources:
+  - userprofiles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - sagemaker.services.k8s.aws
+  resources:
+  - userprofiles/status
   verbs:
   - get
   - patch

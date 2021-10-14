@@ -108,14 +108,14 @@ const (
 	AppSortKey_CreationTime AppSortKey = "CreationTime"
 )
 
-type AppStatus string
+type AppStatus_SDK string
 
 const (
-	AppStatus_Deleted   AppStatus = "Deleted"
-	AppStatus_Deleting  AppStatus = "Deleting"
-	AppStatus_Failed    AppStatus = "Failed"
-	AppStatus_InService AppStatus = "InService"
-	AppStatus_Pending   AppStatus = "Pending"
+	AppStatus_SDK_Deleted   AppStatus_SDK = "Deleted"
+	AppStatus_SDK_Deleting  AppStatus_SDK = "Deleting"
+	AppStatus_SDK_Failed    AppStatus_SDK = "Failed"
+	AppStatus_SDK_InService AppStatus_SDK = "InService"
+	AppStatus_SDK_Pending   AppStatus_SDK = "Pending"
 )
 
 type AppType string
@@ -390,16 +390,16 @@ const (
 	DirectInternetAccess_Disabled DirectInternetAccess = "Disabled"
 )
 
-type DomainStatus string
+type DomainStatus_SDK string
 
 const (
-	DomainStatus_Deleting      DomainStatus = "Deleting"
-	DomainStatus_Failed        DomainStatus = "Failed"
-	DomainStatus_InService     DomainStatus = "InService"
-	DomainStatus_Pending       DomainStatus = "Pending"
-	DomainStatus_Updating      DomainStatus = "Updating"
-	DomainStatus_Update_Failed DomainStatus = "Update_Failed"
-	DomainStatus_Delete_Failed DomainStatus = "Delete_Failed"
+	DomainStatus_SDK_Deleting      DomainStatus_SDK = "Deleting"
+	DomainStatus_SDK_Failed        DomainStatus_SDK = "Failed"
+	DomainStatus_SDK_InService     DomainStatus_SDK = "InService"
+	DomainStatus_SDK_Pending       DomainStatus_SDK = "Pending"
+	DomainStatus_SDK_Updating      DomainStatus_SDK = "Updating"
+	DomainStatus_SDK_Update_Failed DomainStatus_SDK = "Update_Failed"
+	DomainStatus_SDK_Delete_Failed DomainStatus_SDK = "Delete_Failed"
 )
 
 type EdgePackagingJobStatus string
@@ -1621,16 +1621,16 @@ const (
 	UserProfileSortKey_LastModifiedTime UserProfileSortKey = "LastModifiedTime"
 )
 
-type UserProfileStatus string
+type UserProfileStatus_SDK string
 
 const (
-	UserProfileStatus_Deleting      UserProfileStatus = "Deleting"
-	UserProfileStatus_Failed        UserProfileStatus = "Failed"
-	UserProfileStatus_InService     UserProfileStatus = "InService"
-	UserProfileStatus_Pending       UserProfileStatus = "Pending"
-	UserProfileStatus_Updating      UserProfileStatus = "Updating"
-	UserProfileStatus_Update_Failed UserProfileStatus = "Update_Failed"
-	UserProfileStatus_Delete_Failed UserProfileStatus = "Delete_Failed"
+	UserProfileStatus_SDK_Deleting      UserProfileStatus_SDK = "Deleting"
+	UserProfileStatus_SDK_Failed        UserProfileStatus_SDK = "Failed"
+	UserProfileStatus_SDK_InService     UserProfileStatus_SDK = "InService"
+	UserProfileStatus_SDK_Pending       UserProfileStatus_SDK = "Pending"
+	UserProfileStatus_SDK_Updating      UserProfileStatus_SDK = "Updating"
+	UserProfileStatus_SDK_Update_Failed UserProfileStatus_SDK = "Update_Failed"
+	UserProfileStatus_SDK_Delete_Failed UserProfileStatus_SDK = "Delete_Failed"
 )
 
 type VariantPropertyType string
