@@ -31,6 +31,8 @@ from e2e.replacement_values import REPLACEMENT_VALUES
 from e2e.bootstrap_resources import get_bootstrap_resources
 from e2e.common import config as cfg
 from time import sleep
+from flaky import flaky
+
 
 RESOURCE_PLURAL = "hyperparametertuningjobs"
 
@@ -84,6 +86,7 @@ def get_hpo_resource_status(reference: k8s.CustomResourceReference):
     return resource["status"]["hyperParameterTuningJobStatus"]
 
 
+@flaky
 @service_marker
 @pytest.mark.canary
 class TestHPO:
