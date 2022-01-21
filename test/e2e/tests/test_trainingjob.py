@@ -27,6 +27,8 @@ from e2e import (
 )
 from e2e.replacement_values import REPLACEMENT_VALUES
 from e2e.common import config as cfg
+from flaky import flaky
+
 
 RESOURCE_PLURAL = "trainingjobs"
 
@@ -55,6 +57,8 @@ def xgboost_training_job():
         _, deleted = k8s.delete_custom_resource(reference, cfg.JOB_DELETE_WAIT_PERIODS, cfg.JOB_DELETE_WAIT_LENGTH)
         assert deleted
 
+
+@flaky
 @pytest.mark.canary
 @service_marker
 class TestTrainingJob:
